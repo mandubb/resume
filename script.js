@@ -112,6 +112,14 @@ function callNow() {
     window.location.href = `tel:${phoneNumber}`;
 }
 
+function openLinkedIn() {
+    window.open('https://www.linkedin.com/in/christian-angelo-arias-1177862b6/', '_blank');
+}
+
+function openGitHub() {
+    window.open('https://github.com/mandubb', '_blank');
+}
+
 function viewLocation() {
     const address = 'Legazpi Compound, Sampaloc III, Dasmariñas, Cavite, Philippines';
     const encodedAddress = encodeURIComponent(address);

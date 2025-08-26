@@ -117,7 +117,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background: var(--gradient-primary);
@@ -125,6 +125,7 @@ body {
     padding-top: 80px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .hero::before {
@@ -331,6 +332,8 @@ section {
 /* About Section */
 .about {
     background: var(--bg-gray);
+    position: relative;
+    z-index: 1;
 }
 
 .about-content {
