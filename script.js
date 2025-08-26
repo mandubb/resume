@@ -287,7 +287,7 @@ function addButtonLoading(button) {
     };
 }
 
-// Intersection Observer for animations
+// Intersection Observer for animations (excluding About Me section)
 document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         threshold: 0.1,
@@ -303,8 +303,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.info-card, .skill, .soft-skill, .timeline-item, .contact-card, .reference-card');
+    // Observe elements for animation (excluding info-cards from About section)
+    const animateElements = document.querySelectorAll('.skill, .soft-skill, .timeline-item, .contact-card, .reference-card');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
