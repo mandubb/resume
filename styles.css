@@ -76,38 +76,69 @@ body {
     height: 18px;
 }
 
-.logo .flag-sun {
-    top: 2px;
-    left: 3px;
-    width: 8px;
-    height: 8px;
+.logo .flag-triangle {
+    border-top: 9px solid white;
+    border-bottom: 9px solid white;
+    border-right: 12px solid transparent;
 }
 
-.logo .sun-center {
+.logo .flag-blue {
+    width: 18px;
+    height: 9px;
+}
+
+.logo .flag-red {
+    width: 18px;
+    height: 9px;
+}
+
+.logo .flag-sun {
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
     width: 5px;
     height: 5px;
 }
 
-.logo .sun-rays {
-    width: 8px;
-    height: 8px;
-}
-
-.logo .ray {
-    width: 0.8px;
+.logo .sun-center {
+    width: 3px;
     height: 3px;
 }
 
+.logo .sun-rays {
+    width: 5px;
+    height: 5px;
+}
+
+.logo .ray {
+    width: 0.3px;
+    height: 1.5px;
+}
+
 .logo .flag-stars {
-    bottom: 2px;
-    left: 3px;
-    width: 8px;
-    height: 6px;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 8px;
 }
 
 .logo .star {
-    width: 2px;
-    height: 2px;
+    width: 1.5px;
+    height: 1.5px;
+}
+
+.logo .star-1 { 
+    top: 1px; 
+    left: 2px; 
+}
+.logo .star-2 { 
+    top: 5px; 
+    left: 0px; 
+}
+.logo .star-3 { 
+    top: 5px; 
+    left: 3px; 
 }
 
 .nav-menu {
@@ -219,12 +250,24 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.flag-blue {
+.flag-triangle {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 50%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid white;
+    border-bottom: 15px solid white;
+    border-right: 20px solid transparent;
+    z-index: 2;
+}
+
+.flag-blue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 15px;
     background: #0038a8;
     animation: flagShimmer 4s ease-in-out infinite;
 }
@@ -232,19 +275,20 @@ body {
 .flag-red {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
+    right: 0;
+    width: 30px;
+    height: 15px;
     background: #ce1126;
     animation: flagShimmer 4s ease-in-out infinite 0.5s;
 }
 
 .flag-sun {
     position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 12px;
-    height: 12px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
     z-index: 3;
 }
 
@@ -253,8 +297,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     background: #fcd116;
     border-radius: 50%;
     animation: sunGlow 2s ease-in-out infinite alternate;
@@ -265,18 +309,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
 }
 
 .ray {
     position: absolute;
     background: #fcd116;
-    width: 1px;
-    height: 4px;
+    width: 0.5px;
+    height: 2px;
     top: 50%;
     left: 50%;
-    transform-origin: 0 2px;
+    transform-origin: 0 1px;
     opacity: 0.8;
 }
 
@@ -291,35 +335,36 @@ body {
 
 .flag-stars {
     position: absolute;
-    bottom: 3px;
-    left: 4px;
-    width: 12px;
-    height: 8px;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 12px;
     z-index: 3;
 }
 
 .star {
     position: absolute;
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
     background: #fcd116;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: starTwinkle 1.5s ease-in-out infinite alternate;
 }
 
 .star-1 { 
-    top: 0; 
-    left: 0; 
+    top: 2px; 
+    left: 3px; 
     animation-delay: 0s;
 }
 .star-2 { 
-    top: 0; 
-    left: 4px; 
+    top: 8px; 
+    left: 1px; 
     animation-delay: 0.3s;
 }
 .star-3 { 
-    top: 0; 
-    left: 8px; 
+    top: 8px; 
+    left: 5px; 
     animation-delay: 0.6s;
 }
 
