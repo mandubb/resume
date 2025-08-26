@@ -340,77 +340,174 @@ section {
     align-items: start;
 }
 
-.info-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.info-card {
+.about-profile {
     background: var(--bg-white);
-    padding: 1.5rem;
-    border-radius: 15px;
-    text-align: center;
+    padding: 3rem;
+    border-radius: 20px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-}
-
-.info-card i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.info-card h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+.profile-summary h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
-.info-card p {
-    color: var(--text-gray);
+.profile-summary h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
-.about-text p {
+.profile-summary p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-gray);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     text-align: justify;
 }
 
-.personal-details {
-    background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    margin-top: 2rem;
-}
-
-.detail {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.detail:last-child {
-    border-bottom: none;
-}
-
-.detail .label {
+.key-strengths h4 {
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-dark);
+    margin-bottom: 1.5rem;
 }
 
-.detail .value {
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.strength-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.strength-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.strength-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.strength-item:hover i {
+    color: white;
+}
+
+.strength-item span {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.professional-info,
+.career-objective {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+.professional-info h3,
+.career-objective h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.professional-info h3::after,
+.career-objective h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient-secondary);
+    border-radius: 2px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    background: var(--bg-gray);
+    transform: translateX(5px);
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.info-icon i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.info-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.info-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
     color: var(--text-gray);
+}
+
+.career-objective p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-gray);
+    text-align: justify;
 }
 
 /* Education Section */
@@ -870,8 +967,17 @@ section {
         gap: 2rem;
     }
     
-    .info-cards {
+    .strengths-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .about-profile {
+        padding: 2rem;
+    }
+    
+    .professional-info,
+    .career-objective {
+        padding: 2rem;
     }
     
     .skills-content {
