@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    Christian Angelo
+                    <span class="logo-text">Christian Angelo</span>
                 </h2>
             </div>
             <ul class="nav-menu">
@@ -69,27 +69,27 @@
                     <div class="hero-buttons">
                         <button class="btn btn-primary" onclick="scrollToContact()">
                             <i class="fas fa-briefcase"></i>
-                            Hire Me Now
+                            <span>Hire Me Now</span>
                         </button>
                         <button class="btn btn-secondary" onclick="downloadResume()">
                             <i class="fas fa-download"></i>
-                            Download CV
+                            <span>Download CV</span>
                         </button>
                         <button class="btn btn-outline" onclick="scrollToAbout()">
                             <i class="fas fa-info-circle"></i>
-                            Learn More
+                            <span>Learn More</span>
                         </button>
                     </div>
                     <div class="social-links">
-                        <a href="mailto:angeloarias007@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-                        <a href="tel:+639483651112"><i class="fas fa-phone"></i></a>
-                        <a href="https://www.linkedin.com/in/christian-angelo-arias-1177862b6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/mandubb" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:angeloarias007@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+639483651112" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/in/christian-angelo-arias-1177862b6/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/mandubb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="hero-right">
                     <div class="profile-image">
-                        <img src="me formal.png" alt="Christian Angelo M. Arias">
+                        <img src="me formal.png" alt="Christian Angelo M. Arias" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -340,6 +340,30 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h3>Send me a message</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+            
             <div class="references">
                 <h3>Professional References</h3>
                 <div class="reference-cards">
@@ -366,11 +390,11 @@
                 <div class="footer-buttons">
                     <button class="btn btn-outline btn-small" onclick="scrollToTop()">
                         <i class="fas fa-arrow-up"></i>
-                        Back to Top
+                        <span>Back to Top</span>
                     </button>
                     <button class="btn btn-primary btn-small" onclick="downloadResume()">
                         <i class="fas fa-download"></i>
-                        Download Resume
+                        <span>Download Resume</span>
                     </button>
                 </div>
             </div>
